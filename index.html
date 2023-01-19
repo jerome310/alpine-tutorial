@@ -9,8 +9,19 @@
     <title>Alpine Tutorial on Windows</title>
 </head>
  <body>
-    <div x-data="{name: 'Jerome'}">
+    <!-- <div x-data="{name: 'Jerome', message: 'Hello <b>World</b>'}">
 <p x-text="name"></p>
+<p x-html="message"></p> -->
+
+
+<div x-data="{
+    message: 'Click to change', 
+    change() {
+        this.message = 'Changed message'
+    }
+}">
+<span x-text="message" @click="change()"></span>
+</div>
     </div>
  </body>
 </html>
