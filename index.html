@@ -4,36 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        [x-cloak] {
-            display: none;
-        }
-    </style>
-    <title>Document</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Alpine Tutorial</title>
 </head>
-<body>
-   <div class="container mx-auto mt-6 max-w-sm">
-      <h1 class="text-5xl mb-4">Alpine.js Demo</h1>
-
-      <!-- x-data -->
-      <div x-data="{open: false, name: 'Jerome'}">
-         <!-- x-on -->
-        <button x-on:click = "open = !open" class="bg-slate-700 text-white px-4 py-2 rounded-xl">
-            Toggle
-        </button>
-         <!-- x-show -->
-         <div x-show="open" x-transition x-cloak>
-            <p class="bg-gray-200 p-4 my-6 rounded">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum impedit nesciunt cum dolore fugiat suscipit. Fuga numquam voluptates aspernatur! Omnis.
-            </p>
-         </div>
-         <!-- x-text -->
-         <div class="my-4">
-            The value of name is <span x-text="name" class="font-bold"></span>
-         </div>
-      </div>
-   </div> 
-</body>
+ <body>
+    <div x-data="{name: 'Jerome'}">
+<p x-text="name"></p>
+    </div>
+ </body>
 </html>
