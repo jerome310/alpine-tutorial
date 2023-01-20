@@ -7,12 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Alpine Tutorial</title>
+    <title>Alpine Tutorial on Windows</title>
 </head>
+ <body>
+    <!-- <div x-data="{name: 'Jerome', message: 'Hello <b>World</b>'}">
+<p x-text="name"></p>
+<p x-html="message"></p> -->
 
-<body>
-    <div x-data="{name: 'Jerome'}">
-        <p x-text="name"></p>
+
+<div x-data="{
+    message: 'Click to change', 
+    change() {
+        this.message = 'Changed message'
+    }
+}">
+<span x-text="message" @click="change()"></span>
+</div>
     </div>
 </body>
 
