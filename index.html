@@ -9,19 +9,19 @@
     <title>Alpine Tutorial on Windows</title>
 </head>
  <body>
-    <!-- <div x-data="{name: 'Jerome', message: 'Hello <b>World</b>'}">
-<p x-text="name"></p>
-<p x-html="message"></p> -->
+    <!-- <div x-data="{ open: false }">
+        <button @click="open = ! open">Click me</button>
 
+        <span x-show="open">Content Me...</span>
+    </div> -->
 
-<div x-data="{
-    message: 'Click to change', 
-    change() {
-        this.message = 'Changed message'
-    }
-}">
-<span x-text="message" @click="change()"></span>
-</div>
+    <div x-data="dropdown">
+        <button @click="toggle">Toggle Content</button>
+    
+        <div x-show="open">
+            Content...
+        </div>
     </div>
+    <script src="/app.js"></script>
  </body>
 </html>
